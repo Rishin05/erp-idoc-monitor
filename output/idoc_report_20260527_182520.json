@@ -1,0 +1,64 @@
+{
+  "summary": {
+    "total_idocs": 3,
+    "successful": 1,
+    "errors": 2,
+    "high_severity": 1,
+    "medium_severity": 1
+  },
+  "results": [
+    {
+      "file": "idoc_001.xml",
+      "doc_number": "0000000000001",
+      "message_type": "ORDERS",
+      "direction": "Inbound",
+      "sender": "VENDOR_01",
+      "receiver": "SAP_PROD",
+      "status_code": "51",
+      "status_desc": "Application Error",
+      "is_error": true,
+      "classification": {
+        "error_type": "Application Error \u2014 Purchase Order Rejected",
+        "likely_cause": "Missing or invalid material number, vendor not found, or price discrepancy",
+        "severity": "HIGH",
+        "action": "Check E1EDP01 segment for material/quantity fields. Correct and reprocess IDOC."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_002.xml",
+      "doc_number": "0000000000002",
+      "message_type": "INVOIC",
+      "direction": "Inbound",
+      "sender": "VENDOR_02",
+      "receiver": "SAP_PROD",
+      "status_code": "56",
+      "status_desc": "IDOC with Errors Added",
+      "is_error": true,
+      "classification": {
+        "error_type": "No Inbound Processing \u2014 Invoice Partner Profile Missing",
+        "likely_cause": "Inbound INVOIC process code not assigned to partner",
+        "severity": "MEDIUM",
+        "action": "Check WE20 for partner and assign INVOIC inbound process code."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_003.xml",
+      "doc_number": "0000000000003",
+      "message_type": "DESADV",
+      "direction": "Outbound",
+      "sender": "SAP_PROD",
+      "receiver": "WMS_01",
+      "status_code": "03",
+      "status_desc": "Passed to Application",
+      "is_error": false,
+      "classification": {
+        "error_type": "None \u2014 Successfully Processed",
+        "likely_cause": "N/A",
+        "severity": "NONE",
+        "action": "No action required."
+      }
+    }
+  ]
+}

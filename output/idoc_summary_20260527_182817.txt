@@ -1,0 +1,557 @@
+=================================================================
+       SAP IDOC ERROR MONITOR — RUN REPORT
+       Generated: 2026-05-27 18:28:17
+=================================================================
+
+BATCH SUMMARY
+----------------------------------------
+  Total IDOCs Processed : 50
+  Successful            : 23
+  Errors Detected       : 27
+  High Severity         : 10
+  Medium Severity       : 6
+
+FAILED IDOCs
+=================================================================
+
+  File          : idoc_1000000000002.xml
+  Document #    : 0001000000000002
+  Message Type  : ORDERS
+  Direction     : Outbound
+  Sender        : PARTNER_EU
+  Receiver      : ERP_CORE
+  Status        : 51 — Application Error
+  Severity      : HIGH
+  Error Type    : Application Error — Purchase Order Rejected
+  Likely Cause  : Missing or invalid material number, vendor not found, or price discrepancy
+  Action        : Check E1EDP01 segment for material/quantity fields. Correct and reprocess IDOC.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000004.xml
+  Document #    : 0001000000000004
+  Message Type  : INVOIC
+  Direction     : Outbound
+  Sender        : VENDOR_01
+  Receiver      : HR_SYSTEM
+  Status        : 51 — Application Error
+  Severity      : HIGH
+  Error Type    : Application Error — Invoice Posting Failed
+  Likely Cause  : PO reference mismatch, duplicate invoice number, or tax code error
+  Action        : Compare invoice against originating PO. Check for duplicate DOCNUM.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000007.xml
+  Document #    : 0001000000000007
+  Message Type  : INVOIC
+  Direction     : Inbound
+  Sender        : VENDOR_01
+  Receiver      : WMS_01
+  Status        : 51 — Application Error
+  Severity      : HIGH
+  Error Type    : Application Error — Invoice Posting Failed
+  Likely Cause  : PO reference mismatch, duplicate invoice number, or tax code error
+  Action        : Compare invoice against originating PO. Check for duplicate DOCNUM.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000011.xml
+  Document #    : 0001000000000011
+  Message Type  : INVOIC
+  Direction     : Outbound
+  Sender        : VENDOR_02
+  Receiver      : HR_SYSTEM
+  Status        : 51 — Application Error
+  Severity      : HIGH
+  Error Type    : Application Error — Invoice Posting Failed
+  Likely Cause  : PO reference mismatch, duplicate invoice number, or tax code error
+  Action        : Compare invoice against originating PO. Check for duplicate DOCNUM.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000015.xml
+  Document #    : 0001000000000015
+  Message Type  : ORDERS
+  Direction     : Inbound
+  Sender        : VENDOR_02
+  Receiver      : SAP_PROD
+  Status        : 56 — IDOC with Errors Added
+  Severity      : HIGH
+  Error Type    : No Inbound Processing — Partner Profile Missing
+  Likely Cause  : Sender partner profile not configured in SAP
+  Action        : Verify partner profile in WE20. Add missing inbound parameter for ORDERS.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000036.xml
+  Document #    : 0001000000000036
+  Message Type  : ORDERS
+  Direction     : Inbound
+  Sender        : VENDOR_01
+  Receiver      : ERP_CORE
+  Status        : 51 — Application Error
+  Severity      : HIGH
+  Error Type    : Application Error — Purchase Order Rejected
+  Likely Cause  : Missing or invalid material number, vendor not found, or price discrepancy
+  Action        : Check E1EDP01 segment for material/quantity fields. Correct and reprocess IDOC.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000038.xml
+  Document #    : 0001000000000038
+  Message Type  : ORDERS
+  Direction     : Inbound
+  Sender        : VENDOR_04
+  Receiver      : ERP_CORE
+  Status        : 51 — Application Error
+  Severity      : HIGH
+  Error Type    : Application Error — Purchase Order Rejected
+  Likely Cause  : Missing or invalid material number, vendor not found, or price discrepancy
+  Action        : Check E1EDP01 segment for material/quantity fields. Correct and reprocess IDOC.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000040.xml
+  Document #    : 0001000000000040
+  Message Type  : INVOIC
+  Direction     : Inbound
+  Sender        : SUPPLIER_CA
+  Receiver      : SAP_QAS
+  Status        : 51 — Application Error
+  Severity      : HIGH
+  Error Type    : Application Error — Invoice Posting Failed
+  Likely Cause  : PO reference mismatch, duplicate invoice number, or tax code error
+  Action        : Compare invoice against originating PO. Check for duplicate DOCNUM.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000041.xml
+  Document #    : 0001000000000041
+  Message Type  : ORDERS
+  Direction     : Inbound
+  Sender        : VENDOR_05
+  Receiver      : HR_SYSTEM
+  Status        : 56 — IDOC with Errors Added
+  Severity      : HIGH
+  Error Type    : No Inbound Processing — Partner Profile Missing
+  Likely Cause  : Sender partner profile not configured in SAP
+  Action        : Verify partner profile in WE20. Add missing inbound parameter for ORDERS.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000043.xml
+  Document #    : 0001000000000043
+  Message Type  : INVOIC
+  Direction     : Inbound
+  Sender        : VENDOR_01
+  Receiver      : MDM_HUB
+  Status        : 51 — Application Error
+  Severity      : HIGH
+  Error Type    : Application Error — Invoice Posting Failed
+  Likely Cause  : PO reference mismatch, duplicate invoice number, or tax code error
+  Action        : Compare invoice against originating PO. Check for duplicate DOCNUM.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000013.xml
+  Document #    : 0001000000000013
+  Message Type  : DESADV
+  Direction     : Outbound
+  Sender        : VENDOR_05
+  Receiver      : SAP_QAS
+  Status        : 51 — Application Error
+  Severity      : MEDIUM
+  Error Type    : Application Error — Delivery Notification Failed
+  Likely Cause  : Delivery number not found or goods already received
+  Action        : Verify delivery document exists in SAP. Check if GR already posted.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000019.xml
+  Document #    : 0001000000000019
+  Message Type  : DESADV
+  Direction     : Outbound
+  Sender        : VENDOR_01
+  Receiver      : WMS_01
+  Status        : 51 — Application Error
+  Severity      : MEDIUM
+  Error Type    : Application Error — Delivery Notification Failed
+  Likely Cause  : Delivery number not found or goods already received
+  Action        : Verify delivery document exists in SAP. Check if GR already posted.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000029.xml
+  Document #    : 0001000000000029
+  Message Type  : DESADV
+  Direction     : Inbound
+  Sender        : SUPPLIER_CA
+  Receiver      : SAP_QAS
+  Status        : 56 — IDOC with Errors Added
+  Severity      : MEDIUM
+  Error Type    : No Processing — Delivery Partner Profile Missing
+  Likely Cause  : WMS system not configured as partner in SAP
+  Action        : Register WMS partner profile in WE20 for DESADV message type.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000037.xml
+  Document #    : 0001000000000037
+  Message Type  : DESADV
+  Direction     : Outbound
+  Sender        : VENDOR_03
+  Receiver      : HR_SYSTEM
+  Status        : 56 — IDOC with Errors Added
+  Severity      : MEDIUM
+  Error Type    : No Processing — Delivery Partner Profile Missing
+  Likely Cause  : WMS system not configured as partner in SAP
+  Action        : Register WMS partner profile in WE20 for DESADV message type.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000044.xml
+  Document #    : 0001000000000044
+  Message Type  : DESADV
+  Direction     : Outbound
+  Sender        : VENDOR_02
+  Receiver      : WMS_01
+  Status        : 51 — Application Error
+  Severity      : MEDIUM
+  Error Type    : Application Error — Delivery Notification Failed
+  Likely Cause  : Delivery number not found or goods already received
+  Action        : Verify delivery document exists in SAP. Check if GR already posted.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000049.xml
+  Document #    : 0001000000000049
+  Message Type  : INVOIC
+  Direction     : Inbound
+  Sender        : SUPPLIER_US
+  Receiver      : HR_SYSTEM
+  Status        : 56 — IDOC with Errors Added
+  Severity      : MEDIUM
+  Error Type    : No Inbound Processing — Invoice Partner Profile Missing
+  Likely Cause  : Inbound INVOIC process code not assigned to partner
+  Action        : Check WE20 for partner and assign INVOIC inbound process code.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000001.xml
+  Document #    : 0001000000000001
+  Message Type  : HRMD
+  Direction     : Outbound
+  Sender        : VENDOR_02
+  Receiver      : SAP_PROD
+  Status        : 51 — Application Error
+  Severity      : LOW
+  Error Type    : Unknown Error
+  Likely Cause  : Status code not mapped to a known rule
+  Action        : Review IDOC manually in SAP transaction WE02 or WE05.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000006.xml
+  Document #    : 0001000000000006
+  Message Type  : MATMAS
+  Direction     : Outbound
+  Sender        : VENDOR_04
+  Receiver      : WMS_01
+  Status        : 51 — Application Error
+  Severity      : LOW
+  Error Type    : Unknown Error
+  Likely Cause  : Status code not mapped to a known rule
+  Action        : Review IDOC manually in SAP transaction WE02 or WE05.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000008.xml
+  Document #    : 0001000000000008
+  Message Type  : MATMAS
+  Direction     : Outbound
+  Sender        : PARTNER_EU
+  Receiver      : SAP_PROD
+  Status        : 51 — Application Error
+  Severity      : LOW
+  Error Type    : Unknown Error
+  Likely Cause  : Status code not mapped to a known rule
+  Action        : Review IDOC manually in SAP transaction WE02 or WE05.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000017.xml
+  Document #    : 0001000000000017
+  Message Type  : HRMD
+  Direction     : Outbound
+  Sender        : SUPPLIER_CA
+  Receiver      : MDM_HUB
+  Status        : 51 — Application Error
+  Severity      : LOW
+  Error Type    : Unknown Error
+  Likely Cause  : Status code not mapped to a known rule
+  Action        : Review IDOC manually in SAP transaction WE02 or WE05.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000018.xml
+  Document #    : 0001000000000018
+  Message Type  : MATMAS
+  Direction     : Inbound
+  Sender        : VENDOR_02
+  Receiver      : SAP_PROD
+  Status        : 51 — Application Error
+  Severity      : LOW
+  Error Type    : Unknown Error
+  Likely Cause  : Status code not mapped to a known rule
+  Action        : Review IDOC manually in SAP transaction WE02 or WE05.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000024.xml
+  Document #    : 0001000000000024
+  Message Type  : MATMAS
+  Direction     : Outbound
+  Sender        : VENDOR_03
+  Receiver      : SAP_QAS
+  Status        : 51 — Application Error
+  Severity      : LOW
+  Error Type    : Unknown Error
+  Likely Cause  : Status code not mapped to a known rule
+  Action        : Review IDOC manually in SAP transaction WE02 or WE05.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000027.xml
+  Document #    : 0001000000000027
+  Message Type  : DESADV
+  Direction     : Outbound
+  Sender        : VENDOR_05
+  Receiver      : ERP_CORE
+  Status        : 68 — Error — No Further Processing
+  Severity      : LOW
+  Error Type    : Unknown Error
+  Likely Cause  : Status code not mapped to a known rule
+  Action        : Review IDOC manually in SAP transaction WE02 or WE05.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000032.xml
+  Document #    : 0001000000000032
+  Message Type  : MATMAS
+  Direction     : Outbound
+  Sender        : PARTNER_EU
+  Receiver      : ERP_CORE
+  Status        : 51 — Application Error
+  Severity      : LOW
+  Error Type    : Unknown Error
+  Likely Cause  : Status code not mapped to a known rule
+  Action        : Review IDOC manually in SAP transaction WE02 or WE05.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000033.xml
+  Document #    : 0001000000000033
+  Message Type  : HRMD
+  Direction     : Inbound
+  Sender        : VENDOR_01
+  Receiver      : HR_SYSTEM
+  Status        : 51 — Application Error
+  Severity      : LOW
+  Error Type    : Unknown Error
+  Likely Cause  : Status code not mapped to a known rule
+  Action        : Review IDOC manually in SAP transaction WE02 or WE05.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000039.xml
+  Document #    : 0001000000000039
+  Message Type  : MATMAS
+  Direction     : Outbound
+  Sender        : VENDOR_05
+  Receiver      : ERP_CORE
+  Status        : 68 — Error — No Further Processing
+  Severity      : LOW
+  Error Type    : Unknown Error
+  Likely Cause  : Status code not mapped to a known rule
+  Action        : Review IDOC manually in SAP transaction WE02 or WE05.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000042.xml
+  Document #    : 0001000000000042
+  Message Type  : HRMD
+  Direction     : Outbound
+  Sender        : VENDOR_05
+  Receiver      : MDM_HUB
+  Status        : 51 — Application Error
+  Severity      : LOW
+  Error Type    : Unknown Error
+  Likely Cause  : Status code not mapped to a known rule
+  Action        : Review IDOC manually in SAP transaction WE02 or WE05.
+  -------------------------------------------------------
+
+SUCCESSFUL IDOCs
+=================================================================
+
+  File          : idoc_1000000000003.xml
+  Document #    : 0001000000000003
+  Message Type  : INVOIC
+  Direction     : Outbound
+  Status        : 03 — Passed to Application
+  Result        : Processed successfully. No action required.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000005.xml
+  Document #    : 0001000000000005
+  Message Type  : MATMAS
+  Direction     : Inbound
+  Status        : 03 — Passed to Application
+  Result        : Processed successfully. No action required.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000009.xml
+  Document #    : 0001000000000009
+  Message Type  : ORDERS
+  Direction     : Outbound
+  Status        : 03 — Passed to Application
+  Result        : Processed successfully. No action required.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000010.xml
+  Document #    : 0001000000000010
+  Message Type  : MATMAS
+  Direction     : Outbound
+  Status        : 03 — Passed to Application
+  Result        : Processed successfully. No action required.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000012.xml
+  Document #    : 0001000000000012
+  Message Type  : HRMD
+  Direction     : Inbound
+  Status        : 03 — Passed to Application
+  Result        : Processed successfully. No action required.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000014.xml
+  Document #    : 0001000000000014
+  Message Type  : INVOIC
+  Direction     : Inbound
+  Status        : 03 — Passed to Application
+  Result        : Processed successfully. No action required.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000016.xml
+  Document #    : 0001000000000016
+  Message Type  : MATMAS
+  Direction     : Inbound
+  Status        : 03 — Passed to Application
+  Result        : Processed successfully. No action required.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000020.xml
+  Document #    : 0001000000000020
+  Message Type  : MATMAS
+  Direction     : Inbound
+  Status        : 03 — Passed to Application
+  Result        : Processed successfully. No action required.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000021.xml
+  Document #    : 0001000000000021
+  Message Type  : DESADV
+  Direction     : Inbound
+  Status        : 03 — Passed to Application
+  Result        : Processed successfully. No action required.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000022.xml
+  Document #    : 0001000000000022
+  Message Type  : HRMD
+  Direction     : Inbound
+  Status        : 03 — Passed to Application
+  Result        : Processed successfully. No action required.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000023.xml
+  Document #    : 0001000000000023
+  Message Type  : INVOIC
+  Direction     : Inbound
+  Status        : 03 — Passed to Application
+  Result        : Processed successfully. No action required.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000025.xml
+  Document #    : 0001000000000025
+  Message Type  : MATMAS
+  Direction     : Inbound
+  Status        : 03 — Passed to Application
+  Result        : Processed successfully. No action required.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000026.xml
+  Document #    : 0001000000000026
+  Message Type  : HRMD
+  Direction     : Outbound
+  Status        : 03 — Passed to Application
+  Result        : Processed successfully. No action required.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000028.xml
+  Document #    : 0001000000000028
+  Message Type  : MATMAS
+  Direction     : Outbound
+  Status        : 03 — Passed to Application
+  Result        : Processed successfully. No action required.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000030.xml
+  Document #    : 0001000000000030
+  Message Type  : MATMAS
+  Direction     : Inbound
+  Status        : 03 — Passed to Application
+  Result        : Processed successfully. No action required.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000031.xml
+  Document #    : 0001000000000031
+  Message Type  : INVOIC
+  Direction     : Outbound
+  Status        : 03 — Passed to Application
+  Result        : Processed successfully. No action required.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000034.xml
+  Document #    : 0001000000000034
+  Message Type  : ORDERS
+  Direction     : Inbound
+  Status        : 03 — Passed to Application
+  Result        : Processed successfully. No action required.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000035.xml
+  Document #    : 0001000000000035
+  Message Type  : MATMAS
+  Direction     : Inbound
+  Status        : 03 — Passed to Application
+  Result        : Processed successfully. No action required.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000045.xml
+  Document #    : 0001000000000045
+  Message Type  : HRMD
+  Direction     : Inbound
+  Status        : 03 — Passed to Application
+  Result        : Processed successfully. No action required.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000046.xml
+  Document #    : 0001000000000046
+  Message Type  : ORDERS
+  Direction     : Inbound
+  Status        : 03 — Passed to Application
+  Result        : Processed successfully. No action required.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000047.xml
+  Document #    : 0001000000000047
+  Message Type  : INVOIC
+  Direction     : Inbound
+  Status        : 03 — Passed to Application
+  Result        : Processed successfully. No action required.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000048.xml
+  Document #    : 0001000000000048
+  Message Type  : DESADV
+  Direction     : Outbound
+  Status        : 03 — Passed to Application
+  Result        : Processed successfully. No action required.
+  -------------------------------------------------------
+
+  File          : idoc_1000000000050.xml
+  Document #    : 0001000000000050
+  Message Type  : ORDERS
+  Direction     : Inbound
+  Status        : 03 — Passed to Application
+  Result        : Processed successfully. No action required.
+  -------------------------------------------------------
+
+=================================================================
+END OF REPORT
+=================================================================

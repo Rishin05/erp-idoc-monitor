@@ -1,0 +1,888 @@
+{
+  "summary": {
+    "total_idocs": 50,
+    "successful": 23,
+    "errors": 27,
+    "high_severity": 10,
+    "medium_severity": 6
+  },
+  "results": [
+    {
+      "file": "idoc_1000000000001.xml",
+      "doc_number": "0001000000000001",
+      "message_type": "HRMD",
+      "direction": "Outbound",
+      "sender": "VENDOR_02",
+      "receiver": "SAP_PROD",
+      "status_code": "51",
+      "status_desc": "Application Error",
+      "is_error": true,
+      "classification": {
+        "error_type": "Unknown Error",
+        "likely_cause": "Status code not mapped to a known rule",
+        "severity": "LOW",
+        "action": "Review IDOC manually in SAP transaction WE02 or WE05."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000002.xml",
+      "doc_number": "0001000000000002",
+      "message_type": "ORDERS",
+      "direction": "Outbound",
+      "sender": "PARTNER_EU",
+      "receiver": "ERP_CORE",
+      "status_code": "51",
+      "status_desc": "Application Error",
+      "is_error": true,
+      "classification": {
+        "error_type": "Application Error \u2014 Purchase Order Rejected",
+        "likely_cause": "Missing or invalid material number, vendor not found, or price discrepancy",
+        "severity": "HIGH",
+        "action": "Check E1EDP01 segment for material/quantity fields. Correct and reprocess IDOC."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000003.xml",
+      "doc_number": "0001000000000003",
+      "message_type": "INVOIC",
+      "direction": "Outbound",
+      "sender": "VENDOR_03",
+      "receiver": "SAP_QAS",
+      "status_code": "03",
+      "status_desc": "Passed to Application",
+      "is_error": false,
+      "classification": {
+        "error_type": "None \u2014 Successfully Processed",
+        "likely_cause": "N/A",
+        "severity": "NONE",
+        "action": "No action required."
+      }
+    },
+    {
+      "file": "idoc_1000000000004.xml",
+      "doc_number": "0001000000000004",
+      "message_type": "INVOIC",
+      "direction": "Outbound",
+      "sender": "VENDOR_01",
+      "receiver": "HR_SYSTEM",
+      "status_code": "51",
+      "status_desc": "Application Error",
+      "is_error": true,
+      "classification": {
+        "error_type": "Application Error \u2014 Invoice Posting Failed",
+        "likely_cause": "PO reference mismatch, duplicate invoice number, or tax code error",
+        "severity": "HIGH",
+        "action": "Compare invoice against originating PO. Check for duplicate DOCNUM."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000005.xml",
+      "doc_number": "0001000000000005",
+      "message_type": "MATMAS",
+      "direction": "Inbound",
+      "sender": "VENDOR_01",
+      "receiver": "SAP_QAS",
+      "status_code": "03",
+      "status_desc": "Passed to Application",
+      "is_error": false,
+      "classification": {
+        "error_type": "None \u2014 Successfully Processed",
+        "likely_cause": "N/A",
+        "severity": "NONE",
+        "action": "No action required."
+      }
+    },
+    {
+      "file": "idoc_1000000000006.xml",
+      "doc_number": "0001000000000006",
+      "message_type": "MATMAS",
+      "direction": "Outbound",
+      "sender": "VENDOR_04",
+      "receiver": "WMS_01",
+      "status_code": "51",
+      "status_desc": "Application Error",
+      "is_error": true,
+      "classification": {
+        "error_type": "Unknown Error",
+        "likely_cause": "Status code not mapped to a known rule",
+        "severity": "LOW",
+        "action": "Review IDOC manually in SAP transaction WE02 or WE05."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000007.xml",
+      "doc_number": "0001000000000007",
+      "message_type": "INVOIC",
+      "direction": "Inbound",
+      "sender": "VENDOR_01",
+      "receiver": "WMS_01",
+      "status_code": "51",
+      "status_desc": "Application Error",
+      "is_error": true,
+      "classification": {
+        "error_type": "Application Error \u2014 Invoice Posting Failed",
+        "likely_cause": "PO reference mismatch, duplicate invoice number, or tax code error",
+        "severity": "HIGH",
+        "action": "Compare invoice against originating PO. Check for duplicate DOCNUM."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000008.xml",
+      "doc_number": "0001000000000008",
+      "message_type": "MATMAS",
+      "direction": "Outbound",
+      "sender": "PARTNER_EU",
+      "receiver": "SAP_PROD",
+      "status_code": "51",
+      "status_desc": "Application Error",
+      "is_error": true,
+      "classification": {
+        "error_type": "Unknown Error",
+        "likely_cause": "Status code not mapped to a known rule",
+        "severity": "LOW",
+        "action": "Review IDOC manually in SAP transaction WE02 or WE05."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000009.xml",
+      "doc_number": "0001000000000009",
+      "message_type": "ORDERS",
+      "direction": "Outbound",
+      "sender": "VENDOR_02",
+      "receiver": "ERP_CORE",
+      "status_code": "03",
+      "status_desc": "Passed to Application",
+      "is_error": false,
+      "classification": {
+        "error_type": "None \u2014 Successfully Processed",
+        "likely_cause": "N/A",
+        "severity": "NONE",
+        "action": "No action required."
+      }
+    },
+    {
+      "file": "idoc_1000000000010.xml",
+      "doc_number": "0001000000000010",
+      "message_type": "MATMAS",
+      "direction": "Outbound",
+      "sender": "SUPPLIER_US",
+      "receiver": "HR_SYSTEM",
+      "status_code": "03",
+      "status_desc": "Passed to Application",
+      "is_error": false,
+      "classification": {
+        "error_type": "None \u2014 Successfully Processed",
+        "likely_cause": "N/A",
+        "severity": "NONE",
+        "action": "No action required."
+      }
+    },
+    {
+      "file": "idoc_1000000000011.xml",
+      "doc_number": "0001000000000011",
+      "message_type": "INVOIC",
+      "direction": "Outbound",
+      "sender": "VENDOR_02",
+      "receiver": "HR_SYSTEM",
+      "status_code": "51",
+      "status_desc": "Application Error",
+      "is_error": true,
+      "classification": {
+        "error_type": "Application Error \u2014 Invoice Posting Failed",
+        "likely_cause": "PO reference mismatch, duplicate invoice number, or tax code error",
+        "severity": "HIGH",
+        "action": "Compare invoice against originating PO. Check for duplicate DOCNUM."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000012.xml",
+      "doc_number": "0001000000000012",
+      "message_type": "HRMD",
+      "direction": "Inbound",
+      "sender": "PARTNER_EU",
+      "receiver": "SAP_PROD",
+      "status_code": "03",
+      "status_desc": "Passed to Application",
+      "is_error": false,
+      "classification": {
+        "error_type": "None \u2014 Successfully Processed",
+        "likely_cause": "N/A",
+        "severity": "NONE",
+        "action": "No action required."
+      }
+    },
+    {
+      "file": "idoc_1000000000013.xml",
+      "doc_number": "0001000000000013",
+      "message_type": "DESADV",
+      "direction": "Outbound",
+      "sender": "VENDOR_05",
+      "receiver": "SAP_QAS",
+      "status_code": "51",
+      "status_desc": "Application Error",
+      "is_error": true,
+      "classification": {
+        "error_type": "Application Error \u2014 Delivery Notification Failed",
+        "likely_cause": "Delivery number not found or goods already received",
+        "severity": "MEDIUM",
+        "action": "Verify delivery document exists in SAP. Check if GR already posted."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000014.xml",
+      "doc_number": "0001000000000014",
+      "message_type": "INVOIC",
+      "direction": "Inbound",
+      "sender": "VENDOR_04",
+      "receiver": "HR_SYSTEM",
+      "status_code": "03",
+      "status_desc": "Passed to Application",
+      "is_error": false,
+      "classification": {
+        "error_type": "None \u2014 Successfully Processed",
+        "likely_cause": "N/A",
+        "severity": "NONE",
+        "action": "No action required."
+      }
+    },
+    {
+      "file": "idoc_1000000000015.xml",
+      "doc_number": "0001000000000015",
+      "message_type": "ORDERS",
+      "direction": "Inbound",
+      "sender": "VENDOR_02",
+      "receiver": "SAP_PROD",
+      "status_code": "56",
+      "status_desc": "IDOC with Errors Added",
+      "is_error": true,
+      "classification": {
+        "error_type": "No Inbound Processing \u2014 Partner Profile Missing",
+        "likely_cause": "Sender partner profile not configured in SAP",
+        "severity": "HIGH",
+        "action": "Verify partner profile in WE20. Add missing inbound parameter for ORDERS."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000016.xml",
+      "doc_number": "0001000000000016",
+      "message_type": "MATMAS",
+      "direction": "Inbound",
+      "sender": "VENDOR_02",
+      "receiver": "SAP_PROD",
+      "status_code": "03",
+      "status_desc": "Passed to Application",
+      "is_error": false,
+      "classification": {
+        "error_type": "None \u2014 Successfully Processed",
+        "likely_cause": "N/A",
+        "severity": "NONE",
+        "action": "No action required."
+      }
+    },
+    {
+      "file": "idoc_1000000000017.xml",
+      "doc_number": "0001000000000017",
+      "message_type": "HRMD",
+      "direction": "Outbound",
+      "sender": "SUPPLIER_CA",
+      "receiver": "MDM_HUB",
+      "status_code": "51",
+      "status_desc": "Application Error",
+      "is_error": true,
+      "classification": {
+        "error_type": "Unknown Error",
+        "likely_cause": "Status code not mapped to a known rule",
+        "severity": "LOW",
+        "action": "Review IDOC manually in SAP transaction WE02 or WE05."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000018.xml",
+      "doc_number": "0001000000000018",
+      "message_type": "MATMAS",
+      "direction": "Inbound",
+      "sender": "VENDOR_02",
+      "receiver": "SAP_PROD",
+      "status_code": "51",
+      "status_desc": "Application Error",
+      "is_error": true,
+      "classification": {
+        "error_type": "Unknown Error",
+        "likely_cause": "Status code not mapped to a known rule",
+        "severity": "LOW",
+        "action": "Review IDOC manually in SAP transaction WE02 or WE05."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000019.xml",
+      "doc_number": "0001000000000019",
+      "message_type": "DESADV",
+      "direction": "Outbound",
+      "sender": "VENDOR_01",
+      "receiver": "WMS_01",
+      "status_code": "51",
+      "status_desc": "Application Error",
+      "is_error": true,
+      "classification": {
+        "error_type": "Application Error \u2014 Delivery Notification Failed",
+        "likely_cause": "Delivery number not found or goods already received",
+        "severity": "MEDIUM",
+        "action": "Verify delivery document exists in SAP. Check if GR already posted."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000020.xml",
+      "doc_number": "0001000000000020",
+      "message_type": "MATMAS",
+      "direction": "Inbound",
+      "sender": "VENDOR_02",
+      "receiver": "MDM_HUB",
+      "status_code": "03",
+      "status_desc": "Passed to Application",
+      "is_error": false,
+      "classification": {
+        "error_type": "None \u2014 Successfully Processed",
+        "likely_cause": "N/A",
+        "severity": "NONE",
+        "action": "No action required."
+      }
+    },
+    {
+      "file": "idoc_1000000000021.xml",
+      "doc_number": "0001000000000021",
+      "message_type": "DESADV",
+      "direction": "Inbound",
+      "sender": "SUPPLIER_US",
+      "receiver": "MDM_HUB",
+      "status_code": "03",
+      "status_desc": "Passed to Application",
+      "is_error": false,
+      "classification": {
+        "error_type": "None \u2014 Successfully Processed",
+        "likely_cause": "N/A",
+        "severity": "NONE",
+        "action": "No action required."
+      }
+    },
+    {
+      "file": "idoc_1000000000022.xml",
+      "doc_number": "0001000000000022",
+      "message_type": "HRMD",
+      "direction": "Inbound",
+      "sender": "SUPPLIER_CA",
+      "receiver": "MDM_HUB",
+      "status_code": "03",
+      "status_desc": "Passed to Application",
+      "is_error": false,
+      "classification": {
+        "error_type": "None \u2014 Successfully Processed",
+        "likely_cause": "N/A",
+        "severity": "NONE",
+        "action": "No action required."
+      }
+    },
+    {
+      "file": "idoc_1000000000023.xml",
+      "doc_number": "0001000000000023",
+      "message_type": "INVOIC",
+      "direction": "Inbound",
+      "sender": "VENDOR_03",
+      "receiver": "SAP_PROD",
+      "status_code": "03",
+      "status_desc": "Passed to Application",
+      "is_error": false,
+      "classification": {
+        "error_type": "None \u2014 Successfully Processed",
+        "likely_cause": "N/A",
+        "severity": "NONE",
+        "action": "No action required."
+      }
+    },
+    {
+      "file": "idoc_1000000000024.xml",
+      "doc_number": "0001000000000024",
+      "message_type": "MATMAS",
+      "direction": "Outbound",
+      "sender": "VENDOR_03",
+      "receiver": "SAP_QAS",
+      "status_code": "51",
+      "status_desc": "Application Error",
+      "is_error": true,
+      "classification": {
+        "error_type": "Unknown Error",
+        "likely_cause": "Status code not mapped to a known rule",
+        "severity": "LOW",
+        "action": "Review IDOC manually in SAP transaction WE02 or WE05."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000025.xml",
+      "doc_number": "0001000000000025",
+      "message_type": "MATMAS",
+      "direction": "Inbound",
+      "sender": "VENDOR_01",
+      "receiver": "HR_SYSTEM",
+      "status_code": "03",
+      "status_desc": "Passed to Application",
+      "is_error": false,
+      "classification": {
+        "error_type": "None \u2014 Successfully Processed",
+        "likely_cause": "N/A",
+        "severity": "NONE",
+        "action": "No action required."
+      }
+    },
+    {
+      "file": "idoc_1000000000026.xml",
+      "doc_number": "0001000000000026",
+      "message_type": "HRMD",
+      "direction": "Outbound",
+      "sender": "PARTNER_EU",
+      "receiver": "WMS_01",
+      "status_code": "03",
+      "status_desc": "Passed to Application",
+      "is_error": false,
+      "classification": {
+        "error_type": "None \u2014 Successfully Processed",
+        "likely_cause": "N/A",
+        "severity": "NONE",
+        "action": "No action required."
+      }
+    },
+    {
+      "file": "idoc_1000000000027.xml",
+      "doc_number": "0001000000000027",
+      "message_type": "DESADV",
+      "direction": "Outbound",
+      "sender": "VENDOR_05",
+      "receiver": "ERP_CORE",
+      "status_code": "68",
+      "status_desc": "Error \u2014 No Further Processing",
+      "is_error": true,
+      "classification": {
+        "error_type": "Unknown Error",
+        "likely_cause": "Status code not mapped to a known rule",
+        "severity": "LOW",
+        "action": "Review IDOC manually in SAP transaction WE02 or WE05."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000028.xml",
+      "doc_number": "0001000000000028",
+      "message_type": "MATMAS",
+      "direction": "Outbound",
+      "sender": "PARTNER_EU",
+      "receiver": "ERP_CORE",
+      "status_code": "03",
+      "status_desc": "Passed to Application",
+      "is_error": false,
+      "classification": {
+        "error_type": "None \u2014 Successfully Processed",
+        "likely_cause": "N/A",
+        "severity": "NONE",
+        "action": "No action required."
+      }
+    },
+    {
+      "file": "idoc_1000000000029.xml",
+      "doc_number": "0001000000000029",
+      "message_type": "DESADV",
+      "direction": "Inbound",
+      "sender": "SUPPLIER_CA",
+      "receiver": "SAP_QAS",
+      "status_code": "56",
+      "status_desc": "IDOC with Errors Added",
+      "is_error": true,
+      "classification": {
+        "error_type": "No Processing \u2014 Delivery Partner Profile Missing",
+        "likely_cause": "WMS system not configured as partner in SAP",
+        "severity": "MEDIUM",
+        "action": "Register WMS partner profile in WE20 for DESADV message type."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000030.xml",
+      "doc_number": "0001000000000030",
+      "message_type": "MATMAS",
+      "direction": "Inbound",
+      "sender": "VENDOR_04",
+      "receiver": "WMS_01",
+      "status_code": "03",
+      "status_desc": "Passed to Application",
+      "is_error": false,
+      "classification": {
+        "error_type": "None \u2014 Successfully Processed",
+        "likely_cause": "N/A",
+        "severity": "NONE",
+        "action": "No action required."
+      }
+    },
+    {
+      "file": "idoc_1000000000031.xml",
+      "doc_number": "0001000000000031",
+      "message_type": "INVOIC",
+      "direction": "Outbound",
+      "sender": "VENDOR_05",
+      "receiver": "ERP_CORE",
+      "status_code": "03",
+      "status_desc": "Passed to Application",
+      "is_error": false,
+      "classification": {
+        "error_type": "None \u2014 Successfully Processed",
+        "likely_cause": "N/A",
+        "severity": "NONE",
+        "action": "No action required."
+      }
+    },
+    {
+      "file": "idoc_1000000000032.xml",
+      "doc_number": "0001000000000032",
+      "message_type": "MATMAS",
+      "direction": "Outbound",
+      "sender": "PARTNER_EU",
+      "receiver": "ERP_CORE",
+      "status_code": "51",
+      "status_desc": "Application Error",
+      "is_error": true,
+      "classification": {
+        "error_type": "Unknown Error",
+        "likely_cause": "Status code not mapped to a known rule",
+        "severity": "LOW",
+        "action": "Review IDOC manually in SAP transaction WE02 or WE05."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000033.xml",
+      "doc_number": "0001000000000033",
+      "message_type": "HRMD",
+      "direction": "Inbound",
+      "sender": "VENDOR_01",
+      "receiver": "HR_SYSTEM",
+      "status_code": "51",
+      "status_desc": "Application Error",
+      "is_error": true,
+      "classification": {
+        "error_type": "Unknown Error",
+        "likely_cause": "Status code not mapped to a known rule",
+        "severity": "LOW",
+        "action": "Review IDOC manually in SAP transaction WE02 or WE05."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000034.xml",
+      "doc_number": "0001000000000034",
+      "message_type": "ORDERS",
+      "direction": "Inbound",
+      "sender": "VENDOR_05",
+      "receiver": "MDM_HUB",
+      "status_code": "03",
+      "status_desc": "Passed to Application",
+      "is_error": false,
+      "classification": {
+        "error_type": "None \u2014 Successfully Processed",
+        "likely_cause": "N/A",
+        "severity": "NONE",
+        "action": "No action required."
+      }
+    },
+    {
+      "file": "idoc_1000000000035.xml",
+      "doc_number": "0001000000000035",
+      "message_type": "MATMAS",
+      "direction": "Inbound",
+      "sender": "VENDOR_01",
+      "receiver": "WMS_01",
+      "status_code": "03",
+      "status_desc": "Passed to Application",
+      "is_error": false,
+      "classification": {
+        "error_type": "None \u2014 Successfully Processed",
+        "likely_cause": "N/A",
+        "severity": "NONE",
+        "action": "No action required."
+      }
+    },
+    {
+      "file": "idoc_1000000000036.xml",
+      "doc_number": "0001000000000036",
+      "message_type": "ORDERS",
+      "direction": "Inbound",
+      "sender": "VENDOR_01",
+      "receiver": "ERP_CORE",
+      "status_code": "51",
+      "status_desc": "Application Error",
+      "is_error": true,
+      "classification": {
+        "error_type": "Application Error \u2014 Purchase Order Rejected",
+        "likely_cause": "Missing or invalid material number, vendor not found, or price discrepancy",
+        "severity": "HIGH",
+        "action": "Check E1EDP01 segment for material/quantity fields. Correct and reprocess IDOC."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000037.xml",
+      "doc_number": "0001000000000037",
+      "message_type": "DESADV",
+      "direction": "Outbound",
+      "sender": "VENDOR_03",
+      "receiver": "HR_SYSTEM",
+      "status_code": "56",
+      "status_desc": "IDOC with Errors Added",
+      "is_error": true,
+      "classification": {
+        "error_type": "No Processing \u2014 Delivery Partner Profile Missing",
+        "likely_cause": "WMS system not configured as partner in SAP",
+        "severity": "MEDIUM",
+        "action": "Register WMS partner profile in WE20 for DESADV message type."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000038.xml",
+      "doc_number": "0001000000000038",
+      "message_type": "ORDERS",
+      "direction": "Inbound",
+      "sender": "VENDOR_04",
+      "receiver": "ERP_CORE",
+      "status_code": "51",
+      "status_desc": "Application Error",
+      "is_error": true,
+      "classification": {
+        "error_type": "Application Error \u2014 Purchase Order Rejected",
+        "likely_cause": "Missing or invalid material number, vendor not found, or price discrepancy",
+        "severity": "HIGH",
+        "action": "Check E1EDP01 segment for material/quantity fields. Correct and reprocess IDOC."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000039.xml",
+      "doc_number": "0001000000000039",
+      "message_type": "MATMAS",
+      "direction": "Outbound",
+      "sender": "VENDOR_05",
+      "receiver": "ERP_CORE",
+      "status_code": "68",
+      "status_desc": "Error \u2014 No Further Processing",
+      "is_error": true,
+      "classification": {
+        "error_type": "Unknown Error",
+        "likely_cause": "Status code not mapped to a known rule",
+        "severity": "LOW",
+        "action": "Review IDOC manually in SAP transaction WE02 or WE05."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000040.xml",
+      "doc_number": "0001000000000040",
+      "message_type": "INVOIC",
+      "direction": "Inbound",
+      "sender": "SUPPLIER_CA",
+      "receiver": "SAP_QAS",
+      "status_code": "51",
+      "status_desc": "Application Error",
+      "is_error": true,
+      "classification": {
+        "error_type": "Application Error \u2014 Invoice Posting Failed",
+        "likely_cause": "PO reference mismatch, duplicate invoice number, or tax code error",
+        "severity": "HIGH",
+        "action": "Compare invoice against originating PO. Check for duplicate DOCNUM."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000041.xml",
+      "doc_number": "0001000000000041",
+      "message_type": "ORDERS",
+      "direction": "Inbound",
+      "sender": "VENDOR_05",
+      "receiver": "HR_SYSTEM",
+      "status_code": "56",
+      "status_desc": "IDOC with Errors Added",
+      "is_error": true,
+      "classification": {
+        "error_type": "No Inbound Processing \u2014 Partner Profile Missing",
+        "likely_cause": "Sender partner profile not configured in SAP",
+        "severity": "HIGH",
+        "action": "Verify partner profile in WE20. Add missing inbound parameter for ORDERS."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000042.xml",
+      "doc_number": "0001000000000042",
+      "message_type": "HRMD",
+      "direction": "Outbound",
+      "sender": "VENDOR_05",
+      "receiver": "MDM_HUB",
+      "status_code": "51",
+      "status_desc": "Application Error",
+      "is_error": true,
+      "classification": {
+        "error_type": "Unknown Error",
+        "likely_cause": "Status code not mapped to a known rule",
+        "severity": "LOW",
+        "action": "Review IDOC manually in SAP transaction WE02 or WE05."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000043.xml",
+      "doc_number": "0001000000000043",
+      "message_type": "INVOIC",
+      "direction": "Inbound",
+      "sender": "VENDOR_01",
+      "receiver": "MDM_HUB",
+      "status_code": "51",
+      "status_desc": "Application Error",
+      "is_error": true,
+      "classification": {
+        "error_type": "Application Error \u2014 Invoice Posting Failed",
+        "likely_cause": "PO reference mismatch, duplicate invoice number, or tax code error",
+        "severity": "HIGH",
+        "action": "Compare invoice against originating PO. Check for duplicate DOCNUM."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000044.xml",
+      "doc_number": "0001000000000044",
+      "message_type": "DESADV",
+      "direction": "Outbound",
+      "sender": "VENDOR_02",
+      "receiver": "WMS_01",
+      "status_code": "51",
+      "status_desc": "Application Error",
+      "is_error": true,
+      "classification": {
+        "error_type": "Application Error \u2014 Delivery Notification Failed",
+        "likely_cause": "Delivery number not found or goods already received",
+        "severity": "MEDIUM",
+        "action": "Verify delivery document exists in SAP. Check if GR already posted."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000045.xml",
+      "doc_number": "0001000000000045",
+      "message_type": "HRMD",
+      "direction": "Inbound",
+      "sender": "VENDOR_01",
+      "receiver": "HR_SYSTEM",
+      "status_code": "03",
+      "status_desc": "Passed to Application",
+      "is_error": false,
+      "classification": {
+        "error_type": "None \u2014 Successfully Processed",
+        "likely_cause": "N/A",
+        "severity": "NONE",
+        "action": "No action required."
+      }
+    },
+    {
+      "file": "idoc_1000000000046.xml",
+      "doc_number": "0001000000000046",
+      "message_type": "ORDERS",
+      "direction": "Inbound",
+      "sender": "SUPPLIER_CA",
+      "receiver": "WMS_01",
+      "status_code": "03",
+      "status_desc": "Passed to Application",
+      "is_error": false,
+      "classification": {
+        "error_type": "None \u2014 Successfully Processed",
+        "likely_cause": "N/A",
+        "severity": "NONE",
+        "action": "No action required."
+      }
+    },
+    {
+      "file": "idoc_1000000000047.xml",
+      "doc_number": "0001000000000047",
+      "message_type": "INVOIC",
+      "direction": "Inbound",
+      "sender": "VENDOR_01",
+      "receiver": "SAP_PROD",
+      "status_code": "03",
+      "status_desc": "Passed to Application",
+      "is_error": false,
+      "classification": {
+        "error_type": "None \u2014 Successfully Processed",
+        "likely_cause": "N/A",
+        "severity": "NONE",
+        "action": "No action required."
+      }
+    },
+    {
+      "file": "idoc_1000000000048.xml",
+      "doc_number": "0001000000000048",
+      "message_type": "DESADV",
+      "direction": "Outbound",
+      "sender": "PARTNER_EU",
+      "receiver": "WMS_01",
+      "status_code": "03",
+      "status_desc": "Passed to Application",
+      "is_error": false,
+      "classification": {
+        "error_type": "None \u2014 Successfully Processed",
+        "likely_cause": "N/A",
+        "severity": "NONE",
+        "action": "No action required."
+      }
+    },
+    {
+      "file": "idoc_1000000000049.xml",
+      "doc_number": "0001000000000049",
+      "message_type": "INVOIC",
+      "direction": "Inbound",
+      "sender": "SUPPLIER_US",
+      "receiver": "HR_SYSTEM",
+      "status_code": "56",
+      "status_desc": "IDOC with Errors Added",
+      "is_error": true,
+      "classification": {
+        "error_type": "No Inbound Processing \u2014 Invoice Partner Profile Missing",
+        "likely_cause": "Inbound INVOIC process code not assigned to partner",
+        "severity": "MEDIUM",
+        "action": "Check WE20 for partner and assign INVOIC inbound process code."
+      },
+      "flagged_segments": []
+    },
+    {
+      "file": "idoc_1000000000050.xml",
+      "doc_number": "0001000000000050",
+      "message_type": "ORDERS",
+      "direction": "Inbound",
+      "sender": "VENDOR_01",
+      "receiver": "SAP_QAS",
+      "status_code": "03",
+      "status_desc": "Passed to Application",
+      "is_error": false,
+      "classification": {
+        "error_type": "None \u2014 Successfully Processed",
+        "likely_cause": "N/A",
+        "severity": "NONE",
+        "action": "No action required."
+      }
+    }
+  ]
+}

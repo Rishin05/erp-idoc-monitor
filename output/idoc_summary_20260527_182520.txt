@@ -1,0 +1,56 @@
+=================================================================
+       SAP IDOC ERROR MONITOR — RUN REPORT
+       Generated: 2026-05-27 18:25:20
+=================================================================
+
+BATCH SUMMARY
+----------------------------------------
+  Total IDOCs Processed : 3
+  Successful            : 1
+  Errors Detected       : 2
+  High Severity         : 1
+  Medium Severity       : 1
+
+FAILED IDOCs
+=================================================================
+
+  File          : idoc_001.xml
+  Document #    : 0000000000001
+  Message Type  : ORDERS
+  Direction     : Inbound
+  Sender        : VENDOR_01
+  Receiver      : SAP_PROD
+  Status        : 51 — Application Error
+  Severity      : HIGH
+  Error Type    : Application Error — Purchase Order Rejected
+  Likely Cause  : Missing or invalid material number, vendor not found, or price discrepancy
+  Action        : Check E1EDP01 segment for material/quantity fields. Correct and reprocess IDOC.
+  -------------------------------------------------------
+
+  File          : idoc_002.xml
+  Document #    : 0000000000002
+  Message Type  : INVOIC
+  Direction     : Inbound
+  Sender        : VENDOR_02
+  Receiver      : SAP_PROD
+  Status        : 56 — IDOC with Errors Added
+  Severity      : MEDIUM
+  Error Type    : No Inbound Processing — Invoice Partner Profile Missing
+  Likely Cause  : Inbound INVOIC process code not assigned to partner
+  Action        : Check WE20 for partner and assign INVOIC inbound process code.
+  -------------------------------------------------------
+
+SUCCESSFUL IDOCs
+=================================================================
+
+  File          : idoc_003.xml
+  Document #    : 0000000000003
+  Message Type  : DESADV
+  Direction     : Outbound
+  Status        : 03 — Passed to Application
+  Result        : Processed successfully. No action required.
+  -------------------------------------------------------
+
+=================================================================
+END OF REPORT
+=================================================================
